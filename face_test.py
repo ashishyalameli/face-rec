@@ -6,27 +6,24 @@ import os
 # Get a reference to webcam #0 (the default one)
 video_capture = cv2.VideoCapture(0)
 
-test1 = face_recognition.load_image_file("2018-05-22-130053.jpg")
+test1 = face_recognition.load_image_file("aa.jpg")
 test1_encoding = face_recognition.face_encodings(test1)[0]
-test2 = face_recognition.load_image_file("2018-05-22-130449.jpg")
+test2 = face_recognition.load_image_file("bb.jpg")
 test2_encoding = face_recognition.face_encodings(test2)[0]
-#test3 = face_recognition.load_image_file("0014.jpg")
-#test3_encoding = face_recognition.face_encodings(test3)[0]
-test4 = face_recognition.load_image_file("2018-05-22-130122.jpg")
-test4_encoding = face_recognition.face_encodings(test4)[0]
+test3 = face_recognition.load_image_file("cc.jpg")
+test3_encoding = face_recognition.face_encodings(test3)[0]
 
 known_face_encodings = [
-    test1_encoding,test2_encoding,test4_encoding
+    test1_encoding,test2_encoding,test3_encoding
 ]
 
 known_face_names = [
-"shradha","ashish","shilpa"
+"aa","bb","cc"
 ]
 
 test1 = False
 test2 = False
-#test3 = False
-test4 = False
+test3 = False
 
 
 face_locations = []
